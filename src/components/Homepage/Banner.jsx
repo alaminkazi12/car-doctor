@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const banners = [
   {
     title: "Affordable Price For Car Servicing",
@@ -60,12 +60,18 @@ const Banner = () => {
                 </button>
               </div>
             </div>
-            <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-              <a href={banner.prev} className="btn btn-circle">
-                ❮
+            <div className="absolute right-14 bottom-12 flex items-center gap-6">
+              <a
+                href={banner.prev}
+                className="btn btn-circle hover:bg-primary hover:text-white"
+              >
+                <FaArrowLeft />
               </a>
-              <a href={banner.next} className="btn btn-circle">
-                ❯
+              <a
+                href={banner.next}
+                className="btn btn-circle hover:bg-primary hover:text-white"
+              >
+                <FaArrowRight />
               </a>
             </div>
           </div>
