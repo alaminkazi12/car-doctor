@@ -3,29 +3,29 @@ import React from "react";
 const banners = [
   {
     title: "Affordable Price For Car Servicing",
-    subtittle:
-      "There are many variations of passages of  available, but the majority have suffered alteration in some form",
+    subtitle:
+      "There are many variations of passages of available, but the majority have suffered alteration in some form",
     next: "#slide2",
     prev: "#slide4",
   },
   {
     title: "Affordable Price For Car Servicing",
-    subtittle:
-      "There are many variations of passages of  available, but the majority have suffered alteration in some form",
+    subtitle:
+      "There are many variations of passages of available, but the majority have suffered alteration in some form",
     next: "#slide3",
     prev: "#slide1",
   },
   {
     title: "Affordable Price For Car Servicing",
-    subtittle:
-      "There are many variations of passages of  available, but the majority have suffered alteration in some form",
+    subtitle:
+      "There are many variations of passages of available, but the majority have suffered alteration in some form",
     next: "#slide4",
     prev: "#slide2",
   },
   {
     title: "Affordable Price For Car Servicing",
-    subtittle:
-      "There are many variations of passages of  available, but the majority have suffered alteration in some form",
+    subtitle:
+      "There are many variations of passages of available, but the majority have suffered alteration in some form",
     next: "#slide1",
     prev: "#slide3",
   },
@@ -33,7 +33,7 @@ const banners = [
 
 const Banner = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-4">
       <div className="carousel w-full mt-6">
         {banners.map((banner, idx) => (
           <div
@@ -44,14 +44,16 @@ const Banner = () => {
                 idx + 1
               }.jpg)`,
             }}
-            className="carousel-item relative w-full h-[80vh] bg-bottom bg-no-repeat bg-cover rounded-xl"
+            className="carousel-item relative w-full h-[80vh] bg-bottom bg-no-repeat bg-cover rounded-xl flex items-center"
           >
-            <div className=" max-w-[50%] flex flex-col items-center justify-center">
-              <h1 className="text-7xl font-bold max-w-[65%] leading-tight">
+            <div className="max-w-[50%] flex flex-col items-start justify-center ml-12  p-8 rounded-lg">
+              <h1 className="text-6xl max-w-[65%] font-bold leading-tight text-white mb-4">
                 {banner.title}
               </h1>
-              <p className="text-xl max-w-[65%]">{banner.subtittle}</p>
-              <div className="flex items-start justify-start gap-6">
+              <p className="text-lg max-w-[70%] text-white mb-6">
+                {banner.subtitle}
+              </p>
+              <div className="flex items-center gap-4">
                 <button className="btn btn-primary">Discover More</button>
                 <button className="btn btn-outline border-2 text-white">
                   Latest Project
